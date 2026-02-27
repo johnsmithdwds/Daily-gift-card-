@@ -12,17 +12,54 @@ body {
     font-family: Arial, sans-serif;
     text-align: center;
     color: white;
-    background: linear-gradient(-45deg, #ff9a9e, #fad0c4, #a18cd1, #fbc2eb, #84fab0, #8fd3f4);
-    background-size: 400% 400%;
-    animation: gradientBG 15s ease infinite;
+    background: linear-gradient(
+        -45deg,
+        #0f0c29,
+        #1a1a2e,
+        #16213e,
+        #0f3460,
+        #1f1c2c,
+        #2c003e,
+        #000000,
+        #0a0a0a,
+        #140021,
+        #1b0033
+    );
+    background-size: 4000% 4000%;
+    animation: premiumBG 40s ease infinite;
 }
 
-@keyframes gradientBG {
+/* Smooth Moving Gradient */
+@keyframes premiumBG {
     0% { background-position: 0% 50%; }
+    25% { background-position: 50% 100%; }
     50% { background-position: 100% 50%; }
+    75% { background-position: 50% 0%; }
     100% { background-position: 0% 50%; }
 }
 
+/* Glass Card Effect */
+.card {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    padding: 15px;
+    border: 1px solid rgba(255,255,255,0.15);
+    box-shadow:
+        0 0 10px rgba(0, 255, 255, 0.4),
+        0 0 20px rgba(0, 0, 255, 0.3),
+        0 0 40px rgba(255, 0, 255, 0.2);
+    transition: 0.4s ease;
+}
+
+/* Hover Neon Glow */
+.card:hover {
+    transform: scale(1.05);
+    box-shadow:
+        0 0 20px rgba(0, 255, 255, 0.8),
+        0 0 40px rgba(0, 0, 255, 0.6),
+        0 0 80px rgba(255, 0, 255, 0.5);
+}
 .container {
     padding: 20px;
 }
